@@ -74,15 +74,10 @@ public class StudentList {
 			int count=0;
 			for(char ch:array) {
 				if (ch == ' ') {
-					if (!in_word) {
-						count++;
-						in_word = true;
-					} else {
-						in_word = false;
-					}
+					count++;
 				}
 			}	
-			System.out.println(count +Constants.WORD_FOUND  + array.length);
+			System.out.println(count/2 +Constants.WORD_FOUND  + array.length);
 			System.out.println(Constants.LOADED_DATA  );
 		}
 	}
