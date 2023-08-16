@@ -15,7 +15,7 @@ public class StudentList {
 				System.out.println(j);
 			}
 			} catch (Exception e){
-
+				System.out.println(e);
 			}
 			System.out.println("Data Loaded.");
 		}
@@ -33,7 +33,7 @@ public class StudentList {
 					System.out.println(i[y]);
 			}
 			catch (Exception e){
-
+				System.out.println(e);
 			}
 			System.out.println("Data Loaded.");			
 		}
@@ -51,7 +51,7 @@ public class StudentList {
 			s.close();
 			}
 			catch (Exception e){
-
+				System.out.println(e);
 			}
 							
 			System.out.println("Data Loaded.");	
@@ -75,7 +75,7 @@ public class StudentList {
 			}
 			}
 			catch (Exception e){
-
+				System.out.println(e);
 			}
 			System.out.println("Data Loaded.");				
 		}
@@ -103,7 +103,7 @@ public class StudentList {
 			}
 			System.out.println(count +" word(s) found " + a.length);
 			} catch (Exception e){
-
+				System.out.println(e);
 			}
 			System.out.println("Data Loaded.");				
 		}
