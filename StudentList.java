@@ -73,7 +73,7 @@ public class StudentList {
 			boolean in_word = false;
 			int count=0;
 			for(char ch:array) {
-				if (ch == ' ') {
+				if (ch ==Constants.GAP) {
 					count++;
 				}
 			}	

@@ -13,6 +13,7 @@ public class Constants {
       public static String DATE_FORMAT ="dd/mm/yyyy-hh:mm:ss a";       
       public static String LAST_UPDATE_MESSAGE="List last updated on ";
       public static int BOUND=4;
-      // Constants.BOUND
+      public static char GAP=' ';
+      // Constants.GAP
                     
 }
