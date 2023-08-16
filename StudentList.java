@@ -3,6 +3,7 @@ import java.text.*;
 import java.util.*;
 public class StudentList {
 	public static String Reader(){
+		// Reader method Read the 1st Line of student.txt file and return a string
 		String line="";
 		try {
 			BufferedReader bufferedReader = new BufferedReader(
@@ -16,6 +17,7 @@ public class StudentList {
 		return line;
 	}
 	public static void Writer(String substring,String Date){
+		//Writer method write substing and date in student.txt file
 		try {
 			BufferedWriter bufferedWriter = new BufferedWriter(
 					new FileWriter(Constants.FILE_NAME, true));
@@ -28,7 +30,9 @@ public class StudentList {
 	}
 
 	public static void main(String[] args) {
+
 		if(args[0].equals(Constants.ALL)) {
+			//when argument equal a then print student name  of student.txt file
 			System.out.println(Constants.LOADING_DATA);
 			String students[] = Reader().split(Constants.SPILT );
 			for(String student : students) {
@@ -37,6 +41,7 @@ public class StudentList {
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].equals(Constants.RANDOM)){
+			//when argument equal r then print random student name of student.txt file
 			System.out.println(Constants.LOADING_DATA);
 
 			String students[] = Reader().split(Constants.SPILT );
@@ -46,6 +51,8 @@ public class StudentList {
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].contains(Constants.ADD)){
+			//when argument equal +substring then write method write the substring with
+			//lat update time random student name of student.txt file
 			System.out.println(Constants.LOADING_DATA);
 			String substring = args[0].substring(1);
 
@@ -55,6 +62,7 @@ public class StudentList {
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].contains(Constants.QUERY)){
+			//when argument equal ?Student then check student name in student.txt
 			System.out.println(Constants.LOADING_DATA);;
 			String students[] = Reader().split(Constants.SPILT );
 			String student_name = args[0].substring(1);
@@ -68,6 +76,7 @@ public class StudentList {
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].contains(Constants.COUNT)){
+			
 			System.out.println(Constants.LOADING_DATA);
 			char array[] = Reader().toCharArray();
 			boolean in_word = false;
