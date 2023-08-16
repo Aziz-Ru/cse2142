@@ -80,5 +80,8 @@ public class StudentList {
 			System.out.println(count/2 +Constants.WORD_FOUND  + array.length);
 			System.out.println(Constants.LOADED_DATA  );
 		}
+		else{
+			System.out.println(Constants.INVALID);
+		}
 	}
 }
