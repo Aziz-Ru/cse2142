@@ -30,8 +30,7 @@ public class StudentList {
 	public static void main(String[] args) {
 		if(args[0].equals(Constants.ALL)) {
 			System.out.println(Constants.LOADING_DATA);
-			String line=Reader();
-			String students[] = line.split(Constants.SPILT );
+			String students[] = Reader().split(Constants.SPILT );
 			for(String student : students) {
 				System.out.println(student);
 			}
@@ -39,9 +38,8 @@ public class StudentList {
 		}
 		else if(args[0].equals(Constants.RANDOM)){
 			System.out.println(Constants.LOADING_DATA);
-			String line=Reader();
-			System.out.println(line);
-			String students[] = line.split(Constants.SPILT );
+
+			String students[] = Reader().split(Constants.SPILT );
 			Random random = new Random();
 				int number = random.nextInt(Constants.BOUND);
 					System.out.println(students[number]);
@@ -50,18 +48,15 @@ public class StudentList {
 		else if(args[0].contains(Constants.ADD)){
 			System.out.println(Constants.LOADING_DATA);
 			String substring = args[0].substring(1);
-	        Date date = new Date();
+
 	        String dateType = Constants.DATE_FORMAT;
-	        DateFormat dateFormat = new SimpleDateFormat(dateType);
-	        String last_date= dateFormat.format(date);
+	        String last_date= new SimpleDateFormat(dateType).format(new Date());
 			Writer(substring,last_date);
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].contains(Constants.QUERY)){
-			System.out.println(Constants.LOADING_DATA);
-			String line=Reader();
-			//System.out.println(line);
-			String students[] = line.split(Constants.SPILT );
+			System.out.println(Constants.LOADING_DATA);;
+			String students[] = Reader().split(Constants.SPILT );
 			boolean done = false;
 			String student_name = args[0].substring(1);
 
@@ -75,8 +70,7 @@ public class StudentList {
 		}
 		else if(args[0].contains(Constants.COUNT)){
 			System.out.println(Constants.LOADING_DATA);
-			String line=Reader();
-			char array[] = line.toCharArray();
+			char array[] = Reader().toCharArray();
 			boolean in_word = false;
 			int count=0;
 			for(char ch:array) {
