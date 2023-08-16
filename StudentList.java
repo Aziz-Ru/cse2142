@@ -57,13 +57,12 @@ public class StudentList {
 		else if(args[0].contains(Constants.QUERY)){
 			System.out.println(Constants.LOADING_DATA);;
 			String students[] = Reader().split(Constants.SPILT );
-			boolean done = false;
 			String student_name = args[0].substring(1);
 
-			for(int idx = 0; idx<students.length && !done; idx++) {
+			for(int idx = 0; idx<students.length; idx++) {
 				if(students[idx].equals(student_name)) {
 					System.out.println(Constants.FOUND_MESSAGE);
-						done=true;
+					break;
 				}
 			}
 			System.out.println(Constants.LOADED_DATA  );
