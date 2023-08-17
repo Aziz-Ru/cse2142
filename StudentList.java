@@ -32,6 +32,7 @@ public class StudentList {
 	public static void main(String[] args) {
 
 		if(args.length>1){
+			//step 2
 			System.out.println("Number of argument is greater than 1");
 		}
 		else if(args[0].equals(Constants.ALL)) {
