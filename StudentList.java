@@ -3,7 +3,10 @@ import java.text.*;
 import java.util.*;
 public class StudentList {
 	public static void main(String[] args) {
-		if(args[0].equals("a")) {
+		if(args.length>1){
+			System.out.println("Number of argument is greater than 1");
+		}
+		else if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
 			try {
 			BufferedReader s = new BufferedReader(
