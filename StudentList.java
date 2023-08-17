@@ -30,7 +30,7 @@ public class StudentList {
 	}
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
+
 		if(args.length>1){
 			System.out.println("Number of argument is greater than 1");
 		}
@@ -40,7 +40,7 @@ public class StudentList {
 			String students[] = Reader().split(Constants.SPILT );
 			for(String student : students) {
 				System.out.println(student);
-=======
+
 
 		else if(args[0].equals("a")) {
 			System.out.println("Loading data ...");			
@@ -52,18 +52,17 @@ public class StudentList {
 			String i[] = r.split(",");			
 			for(String j : i) {
 				System.out.println(j);
->>>>>>> step2
+
 			}
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].equals(Constants.RANDOM)){
 			//when argument equal r then print random student name of student.txt file
 			System.out.println(Constants.LOADING_DATA);
-
 			String students[] = Reader().split(Constants.SPILT );
 			Random random = new Random();
-				int number = random.nextInt(Constants.BOUND);
-					System.out.println(students[number]);
+			int number = random.nextInt(Constants.BOUND);
+			System.out.println(students[number]);
 			System.out.println(Constants.LOADED_DATA  );
 		}
 		else if(args[0].contains(Constants.ADD)){
