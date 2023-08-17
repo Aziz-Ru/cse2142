@@ -30,13 +30,29 @@ public class StudentList {
 	}
 
 	public static void main(String[] args) {
-
-		if(args[0].equals(Constants.ALL)) {
+<<<<<<< HEAD
+		if(args.length>1){
+			System.out.println("Number of argument is greater than 1");
+		}
+		else if(args[0].equals(Constants.ALL)) {
 			//when argument equal a then print student name  of student.txt file
 			System.out.println(Constants.LOADING_DATA);
 			String students[] = Reader().split(Constants.SPILT );
 			for(String student : students) {
 				System.out.println(student);
+=======
+
+		else if(args[0].equals("a")) {
+			System.out.println("Loading data ...");			
+			try {
+			BufferedReader s = new BufferedReader(
+					new InputStreamReader(
+							new FileInputStream("students.txt"))); 
+			String r = s.readLine();
+			String i[] = r.split(",");			
+			for(String j : i) {
+				System.out.println(j);
+>>>>>>> step2
 			}
 			System.out.println(Constants.LOADED_DATA  );
 		}
