@@ -71,7 +71,6 @@ public class StudentList {
 			//lat update time random student name of student.txt file
 			System.out.println(Constants.LOADING_DATA);
 			String substring = args[0].substring(1);
-
 	        String dateType = Constants.DATE_FORMAT;
 	        String last_date= new SimpleDateFormat(dateType).format(new Date());
 			Writer(substring,last_date);
