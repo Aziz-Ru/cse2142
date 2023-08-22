@@ -41,22 +41,10 @@ public class StudentList {
 			String students[] = Reader().split(Constants.SPILT );
 			for(String student : students) {
 				System.out.println(student);
-
-
-		else if(args[0].equals("a")) {
-			System.out.println("Loading data ...");			
-			try {
-			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
-			String r = s.readLine();
-			String i[] = r.split(",");			
-			for(String j : i) {
-				System.out.println(j);
-
+				}
+				System.out.println(Constants.LOADING_DATA);
 			}
-			System.out.println(Constants.LOADED_DATA  );
-		}
+
 		else if(args[0].equals(Constants.RANDOM)){
 			//when argument equal r then print random student name of student.txt file
 			System.out.println(Constants.LOADING_DATA);
@@ -79,7 +67,11 @@ public class StudentList {
 		else if(args[0].contains(Constants.QUERY)){
 			//when argument equal ?Student then check student name in student.txt
 			System.out.println(Constants.LOADING_DATA);;
-			String students[] = Reader().split(Constants.SPILT );
+			String students[] = Reader().split(Constants.SPILT);
+
+			// for(String student : students) {
+			//	System.out.println(student);
+			//}
 			String student_name = args[0].substring(1);
 
 			for(int idx = 0; idx<students.length; idx++) {
